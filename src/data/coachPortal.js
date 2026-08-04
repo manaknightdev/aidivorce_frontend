@@ -1,0 +1,413 @@
+import expertImg from '../assets/expert-headshot.png'
+
+export const COACH_PROFILE = {
+  name: 'Coach Sam',
+  email: 'sam@coachplatform.com',
+  avatar: expertImg,
+  status: 'Active Status',
+}
+
+export const COACH_STATS = [
+  { id: 'users', label: 'Active Users', value: '24', badge: '+3', badgeTone: 'green' },
+  { id: 'sessions', label: 'Sessions in Progress', value: '8', badge: '+2', badgeTone: 'green' },
+  { id: 'replies', label: 'Replies Pending', value: '5', badge: 'Urgent', badgeTone: 'muted' },
+  { id: 'reviews', label: 'Reviews Received', value: '12', badge: '4.8', badgeTone: 'star' },
+]
+
+export const COACH_TODAY_SESSIONS = [
+  {
+    id: 't1',
+    initials: 'RK',
+    name: 'Robert K.',
+    type: 'Follow-up Session',
+    time: '10:30 AM',
+  },
+  {
+    id: 't2',
+    initials: 'ST',
+    name: 'Sarah T.',
+    type: 'Initial Consultation',
+    time: '2:15 PM',
+  },
+]
+
+export const COACH_ALERTS = [
+  {
+    id: 'a1',
+    kind: 'session',
+    title: 'New Session',
+    time: '10 min ago',
+    text: 'New session from Ontario. Jane D. requested a new coaching session.',
+  },
+  {
+    id: 'a2',
+    kind: 'review',
+    title: 'New Review',
+    time: '1 hour ago',
+    text: 'Michael B. left a new review for your session (4 star rating).',
+  },
+]
+
+export const COACH_INBOX = [
+  {
+    id: 'jane-d',
+    name: 'Jane D.',
+    badge: 'PAID',
+    country: 'Canada',
+    messageLabel: 'Message 3',
+    rating: 5,
+    due: 'Response due in 2 hours',
+    avatar: expertImg,
+    message:
+      "I just separated from my partner after 8 years together. I'm feeling completely lost and don't know what steps to take next. How do I rebuild my life?",
+    aiDraft:
+      "I'm sorry you're going through this — ending an 8-year relationship is a huge transition. Let's start with what feels most urgent: housing/safety, finances, parenting (if applicable), and emotional support. Tell me which of those is weighing on you most right now, and I'll help you map a calm next step.",
+  },
+  {
+    id: 'michael-b',
+    name: 'Michael B.',
+    badge: 'PAID',
+    country: 'Canada',
+    messageLabel: 'Message 1',
+    rating: 3,
+    due: 'Response due in 4 hours',
+    avatar: expertImg,
+    message:
+      'I need help understanding how child support is typically approached in my province before I speak with a lawyer.',
+    aiDraft:
+      'Happy to help you prepare. Child support frameworks vary by province, and the exact amount depends on income, parenting time, and special expenses. Share your province and a rough sense of incomes/parenting schedule, and I’ll outline what usually gets discussed — without replacing legal advice.',
+  },
+  {
+    id: 'sarah-t',
+    name: 'Sarah T.',
+    badge: 'FREE',
+    country: 'USA',
+    messageLabel: 'Message 2',
+    rating: 3,
+    due: 'Response due in 6 hours',
+    avatar: expertImg,
+    message:
+      'My ex keeps changing the pickup schedule last minute. What documentation should I keep?',
+    aiDraft:
+      'Documenting pattern matters more than any single missed pickup. Keep dates/times, what was agreed, what changed, and copies of messages. A short timeline note after each incident will help if you later need coaching or professional support.',
+  },
+  {
+    id: 'anon-47',
+    name: 'Anonymous_User_47',
+    badge: 'GUEST',
+    country: 'USA',
+    messageLabel: 'Message 1',
+    rating: null,
+    due: 'Response due in 10 hours',
+    avatar: null,
+    message: 'Can I start a free consultation without sharing my full legal name?',
+    aiDraft:
+      'Yes — you can begin with the information you’re comfortable sharing. For coaching we mainly need context about your situation and location. You can update your profile details later if you book a paid session.',
+  },
+  {
+    id: 'robert-k',
+    name: 'Robert K.',
+    badge: 'PAID',
+    country: 'Canada',
+    messageLabel: 'Message 3',
+    rating: 4,
+    due: 'Response due in 12 hours',
+    avatar: expertImg,
+    message:
+      'Following up on our last session — I drafted a parenting notice template. Can you review the tone?',
+    aiDraft:
+      'Glad you drafted something. Paste the template here and I’ll suggest edits for clarity and a calmer, businesslike tone — especially around notice timing and what to do if plans change.',
+  },
+]
+
+export const COACH_CALENDAR_SESSIONS = [
+  {
+    id: 'c1',
+    name: 'Sarah M.',
+    location: 'Ontario, Canada',
+    country: 'Canada',
+    badge: 'PAID',
+    when: 'Jan 15, 2025 - 9:00 AM - 10:00 AM',
+    service: 'Relationship Counseling',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Sarah Mitchell',
+      phone: '416-555-0142',
+      email: 'sarah.m@email.com',
+      status: 'Separated',
+      duration: '8–12 years',
+      hasChildren: 'Yes',
+      childrenAges: '7, 11',
+      divorceFiled: 'Not sure',
+      legalRep: 'No',
+      goal: 'I need help setting calm boundaries around co-parenting communication and figuring out what to prioritize before mediation.',
+      topics: ['Parenting / Custody', 'Communication'],
+      submittedAt: 'Jan 12, 2025 · 4:20 PM',
+    },
+  },
+  {
+    id: 'c2',
+    name: 'Mike R.',
+    location: 'British Columbia, Canada',
+    country: 'Canada',
+    badge: 'PAID',
+    when: 'Jan 16, 2025 - 10:00 AM - 11:00 AM',
+    service: 'Career Transition',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Mike Reynolds',
+      phone: '604-555-0198',
+      email: 'mike.r@email.com',
+      status: 'Considering separation',
+      duration: '3–5 years',
+      hasChildren: 'No',
+      childrenAges: '',
+      divorceFiled: 'No',
+      legalRep: 'Not sure',
+      goal: 'I want clarity on how career and income changes could affect support and next steps if we separate.',
+      topics: ['Finances / Support', 'Property / Assets'],
+      submittedAt: 'Jan 13, 2025 · 11:05 AM',
+    },
+  },
+  {
+    id: 'c3',
+    name: 'Emma K.',
+    location: 'Alberta, Canada',
+    country: 'Canada',
+    badge: 'PAID',
+    when: 'Jan 17, 2025 - 1:00 PM - 2:00 PM',
+    service: 'Life Coaching',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Emma Kane',
+      phone: '403-555-0177',
+      email: 'emma.k@email.com',
+      status: 'Separated',
+      duration: '5–8 years',
+      hasChildren: 'Yes',
+      childrenAges: '4',
+      divorceFiled: 'Yes',
+      legalRep: 'Yes',
+      goal: 'I feel overwhelmed managing day-to-day decisions. I need a practical weekly plan and emotional grounding.',
+      topics: ['Emotional Support', 'Parenting / Custody'],
+      submittedAt: 'Jan 14, 2025 · 9:40 AM',
+    },
+  },
+  {
+    id: 'c4',
+    name: 'David L.',
+    location: 'Quebec, Canada',
+    country: 'Canada',
+    badge: 'PAID',
+    when: 'Jan 18, 2025 - 11:00 AM - 12:00 PM',
+    service: 'Financial Planning',
+    avatar: expertImg,
+    intake: {
+      fullName: 'David Laurent',
+      phone: '514-555-0133',
+      email: 'david.l@email.com',
+      status: 'Divorced',
+      duration: '12+ years',
+      hasChildren: 'Yes',
+      childrenAges: '14, 16',
+      divorceFiled: 'Yes',
+      legalRep: 'Yes',
+      goal: 'Help me organize income documents and understand what questions to ask my lawyer about support estimates.',
+      topics: ['Finances / Support', 'Legal Process'],
+      submittedAt: 'Jan 14, 2025 · 6:15 PM',
+    },
+  },
+  {
+    id: 'c5',
+    name: 'Lisa P.',
+    location: 'Manitoba, Canada',
+    country: 'Canada',
+    badge: 'PAID',
+    when: 'Jan 19, 2025 - 3:00 PM - 4:00 PM',
+    service: 'Personal Development',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Lisa Patel',
+      phone: '204-555-0160',
+      email: 'lisa.p@email.com',
+      status: 'Separated',
+      duration: '1–3 years',
+      hasChildren: 'No',
+      childrenAges: '',
+      divorceFiled: 'No',
+      legalRep: 'No',
+      goal: 'I want confidence rebuilding routines and deciding what “good enough” progress looks like this month.',
+      topics: ['Emotional Support', 'Communication'],
+      submittedAt: 'Jan 15, 2025 · 1:05 PM',
+    },
+  },
+]
+
+export const COACH_PENDING = [
+  {
+    id: 'p1',
+    name: 'Jessica L.',
+    location: 'Quebec, Canada',
+    country: 'Canada',
+    when: 'Jan 18, 2025 - 11:00 AM - 12:00 PM',
+    category: 'Anxiety Management',
+    issue: 'Struggling with work-related stress and anxiety attacks',
+    submitted: 'Submitted: 2 hours ago',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Jessica Lemieux',
+      phone: '418-555-0111',
+      email: 'jessica.l@email.com',
+      status: 'Considering separation',
+      duration: '5–8 years',
+      hasChildren: 'Yes',
+      childrenAges: '6, 9',
+      divorceFiled: 'No',
+      legalRep: 'No',
+      goal: 'Struggling with work-related stress and anxiety attacks while navigating separation talks.',
+      topics: ['Emotional Support', 'Parenting / Custody'],
+      submittedAt: '2 hours ago',
+    },
+  },
+  {
+    id: 'p2',
+    name: 'David T.',
+    location: 'Manitoba, Canada',
+    country: 'Canada',
+    when: 'Jan 19, 2025 - 3:00 PM - 4:00 PM',
+    category: 'Career Transition',
+    issue: 'Mid-life career change, seeking guidance on new direction',
+    submitted: 'Submitted: 4 hours ago',
+    avatar: expertImg,
+    intake: {
+      fullName: 'David Thompson',
+      phone: '204-555-0188',
+      email: 'david.t@email.com',
+      status: 'Married',
+      duration: '12+ years',
+      hasChildren: 'Yes',
+      childrenAges: '10, 13',
+      divorceFiled: 'Not sure',
+      legalRep: 'Not sure',
+      goal: 'Mid-life career change — seeking guidance on a new direction and how it affects family finances.',
+      topics: ['Finances / Support', 'Emotional Support'],
+      submittedAt: '4 hours ago',
+    },
+  },
+  {
+    id: 'p3',
+    name: 'Lisa W.',
+    location: 'Nova Scotia, Canada',
+    country: 'Canada',
+    when: 'Jan 20, 2025 - 1:30 PM - 2:30 PM',
+    category: 'Relationship Counseling',
+    issue: 'Communication issues with partner, considering couples therapy',
+    submitted: 'Submitted: 6 hours ago',
+    avatar: expertImg,
+    intake: {
+      fullName: 'Lisa Walsh',
+      phone: '902-555-0144',
+      email: 'lisa.w@email.com',
+      status: 'Married',
+      duration: '8–12 years',
+      hasChildren: 'No',
+      childrenAges: '',
+      divorceFiled: 'No',
+      legalRep: 'No',
+      goal: 'Communication issues with partner; considering whether couples therapy or separation planning is next.',
+      topics: ['Communication', 'Emotional Support'],
+      submittedAt: '6 hours ago',
+    },
+  },
+]
+
+export function getCoachSessionById(id) {
+  return (
+    COACH_CALENDAR_SESSIONS.find((s) => s.id === id) ||
+    COACH_PENDING.find((s) => s.id === id) ||
+    null
+  )
+}
+
+export const COACH_ACTIVITY = [
+  {
+    id: 'n1',
+    kind: 'session',
+    title: 'New Session Submitted',
+    text: 'Jane D. from Alberta needs guidance on career transition.',
+    time: '2 hours ago',
+  },
+  {
+    id: 'n2',
+    kind: 'rating',
+    title: 'New 5★ Rating',
+    text: "Quebec client left a 5-star review saying: 'Very helpful advice, thank you!'",
+    time: '4 hours ago',
+  },
+  {
+    id: 'n3',
+    kind: 'zoom',
+    title: 'Zoom Session Booked',
+    text: 'Mike R. booked a 1-hour consultation for Jan 18, 2025.',
+    time: '6 hours ago',
+  },
+  {
+    id: 'n4',
+    kind: 'reminder',
+    title: 'Session Reminder',
+    text: 'Reminder: Upcoming 3:00 PM session with Sarah M.',
+    time: '8 hours ago',
+  },
+  {
+    id: 'n5',
+    kind: 'payment',
+    title: 'Payment Received',
+    text: 'Payment of $75 received for premium consultation package from Ontario.',
+    time: '1 day ago',
+  },
+  {
+    id: 'n6',
+    kind: 'message',
+    title: 'New Message',
+    text: 'Robert K. sent a follow-up message regarding his consultation.',
+    time: '1 day ago',
+  },
+  {
+    id: 'n7',
+    kind: 'completed',
+    title: 'Session Completed',
+    text: 'Successfully completed 1-hour session with Emma K. from Alberta.',
+    time: '2 days ago',
+  },
+  {
+    id: 'n8',
+    kind: 'client',
+    title: 'New Client Registration',
+    text: 'Lisa M. from British Columbia registered for premium coaching services.',
+    time: '2 days ago',
+  },
+]
+
+export const COACH_REVIEWS = [
+  {
+    id: 'r1',
+    kind: 'rating',
+    title: 'New 5★ Rating',
+    text: "Quebec client left a 5-star review saying: 'Very helpful advice, thank you!'",
+    time: '4 hours ago',
+  },
+  {
+    id: 'r2',
+    kind: 'rating',
+    title: 'New 4★ Rating',
+    text: 'Michael B. left a new review for your session (4 star rating).',
+    time: '1 day ago',
+  },
+  {
+    id: 'r3',
+    kind: 'rating',
+    title: 'New 5★ Rating',
+    text: "Ontario client: 'Clear next steps and a calm tone throughout.'",
+    time: '3 days ago',
+  },
+]

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+
+  --color-brand-50: #f5faee;
+  --color-brand-100: #e7f4d6;
+  --color-brand-200: #cfe9ae;
+  --color-brand-300: #b1da7e;
+  --color-brand-400: #96cb55;
+  --color-brand-500: #8bc34a;
+  --color-brand-600: #6da435;
+  --color-brand-700: #547e2c;
+  --color-brand-800: #446427;
+  --color-brand-900: #3a5524;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 min-w-80 bg-white font-sans text-slate-700 antialiased;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: var(--color-brand-500);
+  }
+}
